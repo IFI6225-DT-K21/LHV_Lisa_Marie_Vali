@@ -1,0 +1,143 @@
+body {
+  font-size: 16px;
+  font-family: 'Neue Helvetica W06', Helvetica;
+  margin: 0;
+}
+
+
+.navbar {
+  position: relative;
+  display: block;
+  height: 100px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 11px;
+  text-decoration: none;
+
+}
+
+div.contain-nav {
+  margin-left: auto;
+  margin-right: auto;
+  width: 975px;
+  padding: 0, 15px;
+
+}
+
+.logo{
+  float: left;
+  width: 124px;
+  padding: 40px 0 0 0;
+  /* vertical-align: middle;
+  margin-top: auto;
+  margin-bottom: auto; */
+
+
+}
+.logo-icon {
+  width: 84px;
+  cursor: pointer;
+  vertical-align: middle;
+  display: inline;
+}
+a {
+  text-decoration: none;
+  list-style: none;
+  color: black;
+
+}
+
+.options1 {
+  float: left;
+  line-height: 200%;;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  margin-left: 0%;
+  margin-top: 1.5em;
+}
+
+.options2 {
+  width: 210px;
+  float: right;
+  list-style: none;
+  display: flex;
+  color: black;
+  margin-top: 3.5em;
+  justify-content: space-between;
+
+
+}
+.current {
+  font-weight: bold;
+  justify-content: space-between;
+}
+
+.log-in {
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  height: 76px;
+  background-color: #f4f4f4;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+
+}
+
+.log-in-options {
+  height: 36px;
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  margin: 2em;
+  width: 423px;
+  justify-content: space-between;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #C2C2C5;
+  border-radius: 10px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+input {
+  height: 36px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+button {
+  height: 36px;
+  vertical-align: middle;
+  text-align: center;
+  background-color: #888;
+  color: white;
+  border-radius: 5px;
+
+}
+/* .cont {
+  width: 58em;
+} */
+
+.options3 {
+  height: 56px;
+  background-color: #f4f4f4;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  vertical-align: middle;
+}
+
+ul {
+  list-style: none;
+  justify-content: space-evenly;
+  display: flex;
+  width: 800px;
+
+
+}
