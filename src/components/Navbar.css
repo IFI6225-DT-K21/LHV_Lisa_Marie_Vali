@@ -1,0 +1,220 @@
+body {
+  font-size: 16px;
+  font-family: 'Neue Helvetica W06', Helvetica;
+  margin: 0;
+}
+
+@media screen and (min-width: 769px) {
+  .navbar {
+    position: relative;
+    display: block;
+    height: 100px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 11px;
+    text-decoration: none;
+  
+  }
+  
+  div.contain-nav {
+    margin-left: auto;
+    margin-right: auto;
+    width: 975px;
+    padding: 0, 15px;
+  
+  }
+  
+  .logo{
+    float: left;
+    width: 124px;
+    padding: 40px 0 0 0;
+    /* vertical-align: middle;
+    margin-top: auto;
+    margin-bottom: auto; */
+  
+  
+  }
+  .logo-icon {
+    width: 84px;
+    cursor: pointer;
+    vertical-align: middle;
+    display: inline;
+  }
+  a {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+  
+  }
+  
+  .options1 {
+    float: left;
+    line-height: 200%;;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    margin-left: 0%;
+    margin-top: 1.5em;
+  }
+  
+  .options2 {
+    width: 210px;
+    float: right;
+    list-style: none;
+    display: flex;
+    color: black;
+    margin-top: 3.5em;
+    justify-content: space-between;
+  
+  
+  }
+  .current {
+    font-weight: bold;
+    justify-content: space-between;
+  }
+  
+  .log-in {
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    height: 76px;
+    background-color: #f4f4f4;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  
+  }
+  
+  .log-in-options {
+    height: 36px;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    margin: 2em;
+    width: 423px;
+    justify-content: space-between;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #C2C2C5;
+    border-radius: 10px;
+    vertical-align: middle;
+    text-align: center;
+  }
+  
+  input {
+    height: 36px;
+    vertical-align: middle;
+    text-align: center;
+  }
+  
+  button {
+    height: 36px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: #888;
+    color: white;
+    border-radius: 5px;
+  
+  }
+  /* .cont {
+    width: 58em;
+  } */
+  
+  .options3 {
+    display: flex;
+    justify-content: center;
+    height: 56px;
+    background-color: #f4f4f4;
+    margin-top: 1px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 2rem;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  
+  ul {
+    list-style: none;
+    justify-content: space-evenly;
+    display: flex;
+    width: 800px;
+  
+  
+  }
+  .options3 {
+    position: relative;
+  
+  }
+  
+  .options3 button {
+    display: none;
+  }
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    height: 60px;
+
+  }
+  .options1, 
+  .options2, 
+  .log-in {
+    display: none;
+  }
+
+  
+.options3 button {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 10;
+  cursor: pointer;
+  background-color: transparent;
+  color: #7c7c85;
+  border: none;
+}
+
+.menuNav {
+  overflow-y: scroll;
+  list-style: none;
+  position: fixed;
+  top: 60px;
+  background: #f4f4f4;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 0;
+  overflow: hidden;
+  z-index: 9;
+}
+
+.menuNav.showMenu {
+  width: 100%;
+}
+
+li {
+  display: block;
+  margin: 40px -15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.special {
+  font-weight: lighter;
+  text-transform:none;
+}
+
+.menuNav li:first-child {
+  margin-top: 3rem;
+}
+}
+
