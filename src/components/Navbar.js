@@ -1,11 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-bootstrap/Carousel';
+// import { Dropdown } from 'semantic-ui-react'
 import { MdClose } from "react-icons/md"
 import { FiMenu } from "react-icons/fi"
 import { HiOutlineArrowNarrowRight } from "react-icons/hi"
 import { AiFillPlayCircle } from "react-icons/ai"
+import { GoPlus } from "react-icons/go"
+
+
 import { AiOutlineInstagram } from "react-icons/ai"
 import { FiFacebook } from "react-icons/fi"
 import { AiOutlineYoutube } from "react-icons/ai"
@@ -20,7 +24,7 @@ function Navbar() {
   const handleToggle = () => {
     setNavbarOpen(!navbarOpen)
   }
-
+  
   return (
     <body>
     <nav className='navbar'>
@@ -34,7 +38,6 @@ function Navbar() {
           <li>FINANTSPORTAAL</li>
           <li>INVESTOR</li>
           
-          
         </div>
         <div className='options2'>
           <li>AVA KONTO<br/></li>
@@ -42,9 +45,21 @@ function Navbar() {
           <li>EN<br/></li>
           <li>RU<br/></li>
         </div>
-
       </div>
-      
+      <div>
+         <button className='navButton'>Sisene</button>
+      </div>
+     
+      {/* <div role="listbox" aria-expanded="false" class="ui fluid selection dropdown" tabindex="0">
+        <div aria-atomic="true" aria-live="polite" role="alert" class="divider default text">Select Friend</div>
+        <i aria-hidden="true" class="dropdown icon"></i>
+        <div class="menu transition">
+          <div style="pointer-events:all" role="option" aria-checked="false" aria-selected="true" class="selected item"><span class="text">ET</span></div>
+          <div style="pointer-events:all" role="option" aria-checked="false" aria-selected="false" class="item"><span class="text">EN</span></div>
+          <div style="pointer-events:all" role="option" aria-checked="false" aria-selected="false" class="item"><span class="text">RU</span></div>
+        </div>
+      </div> */}
+
     </nav>
     <div className="log-in">
       <div className="log-in-options">
@@ -62,7 +77,7 @@ function Navbar() {
       </div>
     </div>
     <div className="options3">
-      <div className="cont">
+
       <button onClick={handleToggle}>
         {navbarOpen ? (
           <MdClose style={{ width: "25px", height: "25px" }} />
@@ -70,15 +85,22 @@ function Navbar() {
           <FiMenu style={{ width: "25px", height: "25px" }} />
         )}
       </button>      
-        <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
-          <li>Igapäevapangandus</li>
-          <li>Raha kasvatamine</li>
-          <li>Laen ja liising</li>
-          <li>Pension</li>
-          <li className="special">Vajad abi?</li>
+        <ul className={`menuNav ${navbarOpen ? " showMenu" : "hideMenu"}`}>
+          <li className='showMenulist'>Igapäevapangandus <GoPlus className='plusicon'/></li>
+          <li className='showMenulist'>Raha kasvatamine<GoPlus className='plusicon'/></li>
+          <li className='showMenulist'>Laen ja liising<GoPlus className='plusicon'/></li>
+          <li className='showMenulist'>Pension<GoPlus className='plusicon'/></li>
+          <li className="menuNav1">Vajad abi?</li>
+
+          <div className='menuNav2'>
+            <li className='showMenulist'>Tule kliendiks <GoPlus className='plusicon'/></li>
+            <li className='showMenulist'>Kasulikku <GoPlus className='plusicon'/></li>
+            <li className='showMenulist'>LHV <GoPlus className='plusicon'/></li>
+            <li className='showMenulist'>Kontakt <GoPlus className='plusicon'/></li>
+          </div>
         </ul>
-      </div>
     </div>
+
     <Carousel>
       <Carousel.Item>
         <img
@@ -107,8 +129,7 @@ function Navbar() {
         <img
           className="d-block w-100"
           src="/pics/winter.png"
-          alt="Third slide"
-        />
+          alt="Third slide"/>
 
         <Carousel.Caption>
           <h3>Third slide label</h3>
@@ -124,28 +145,26 @@ function Navbar() {
         <p className="lisa">Loe lisa <HiOutlineArrowNarrowRight/></p>
       </div>
       <div className="text-columns12">
-      <p className="heading">LHV langetas indeksfondide valitsemistasu poole võrra</p>
+        <p className="heading">LHV langetas indeksfondide valitsemistasu poole võrra</p>
         <p>Alates tänasest langetas LHV passiivselt juhitud pensionifondide valitsemistasud 
           0,39% pealt 0,20% peale. Selle sammuga muutis LHV oma indeksfondid Eesti soodsaima valitsemistasumääraga pensionifondideks.</p>
-          <p className="lisa">Loe lisa <HiOutlineArrowNarrowRight/></p>
+        <p className="lisa">Loe lisa <HiOutlineArrowNarrowRight/></p>
       </div>
       <div className="text-columns3">
       <p className="heading">Kuula LHV Podcasti</p>
-        <p>
-          <li><AiFillPlayCircle className="icons"/>  Hetkeolukord Balti ja USA turgudel</li>
-          <li><AiFillPlayCircle className="icons"/> Urmo Kübar ja Karin Maasel heate...</li>
-          <li><AiFillPlayCircle className="icons"/> Gamestop ja pöörane nädal turgudel</li>
-          <li><AiFillPlayCircle className="icons"/> Mis toimub USA ja Balti turgudel?</li>
-          <li><AiFillPlayCircle className="icons"/> Kristo Aab ja Ülo Kaasik majandu...</li>
-          <li><AiFillPlayCircle className="icons"/> Mihkel Mardna tervishoiust</li>
-          <li><AiFillPlayCircle className="icons"/> Almondi Esco Imepilt AS-i aktsia...</li>
-          <li><AiFillPlayCircle className="icons"/> Martti Siimanniga restoraniärist</li>
-          <li><AiFillPlayCircle className="icons"/> Nelli Janson ja Robin Särg innu...</li>
+          <li className='podcastlist'><AiFillPlayCircle className="icons"/>  Hetkeolukord Balti ja USA turgudel</li>
+          <li className='podcastlist'><AiFillPlayCircle className="icons"/> Urmo Kübar ja Karin Maasel heate...</li>
+          <li className='podcastlist'><AiFillPlayCircle className="icons"/> Gamestop ja pöörane nädal turgudel</li>
+          <li className='podcastlist'><AiFillPlayCircle className="icons"/> Mis toimub USA ja Balti turgudel?</li>
+          <li className='podcastlist'><AiFillPlayCircle className="icons"/> Kristo Aab ja Ülo Kaasik majandu...</li>
+          <li className='podcastlist'><AiFillPlayCircle className="icons"/> Mihkel Mardna tervishoiust</li>
+          <li className='podcastlist'><AiFillPlayCircle className="icons"/> Almondi Esco Imepilt AS-i aktsia...</li>
+          <li className='podcastlist'><AiFillPlayCircle className="icons"/> Martti Siimanniga restoraniärist</li>
+          <li className='podcastlist'><AiFillPlayCircle className="icons"/> Nelli Janson ja Robin Särg innu...</li>
           <p className="lisa">Kuula kõiki <HiOutlineArrowNarrowRight/></p>
-        </p>
       </div>
-
     </div>
+
     <footer className="footer">
       <div className="footermenu">
         <div className="footcol1">
@@ -165,8 +184,6 @@ function Navbar() {
           <li>Turvalisus</li>
           <li>Teata pettusest</li>
           <li>KKK</li>
-
-
         </div>
         <div className="footcol1">
           <li className="foothighlight">LHV</li>
@@ -187,7 +204,6 @@ function Navbar() {
           <li>Broneeri kohtumisaeg</li>
           <li>Sularahaautomaadid</li>
         </div>
-
       </div>
 
       <div className="socialicons">
@@ -202,8 +218,7 @@ function Navbar() {
           <img className="iconpic" src="pics/google-play-et.svg" alt=""/>
           <img className="iconpic" src="pics/huawei-et.svg" alt=""/>
         </div>
-          
-
+  
       </div>
       <div className="bottomtext">
         <p>AS LHV Group, Tartu mnt 2, 10145, Tallinn. Oled finantsteenuseid pakkuvate 
@@ -215,9 +230,7 @@ function Navbar() {
           Veebilehte ja sellel sisalduvat informatsiooni kasutades nõustud eeltoodud tingimuste 
           ja veebilehe <u>kasutustingimustega</u>. <u>Noteeringud on viivitusega</u>.</p>
       </div>
-
     </footer>
-    
   </body>
   );
 }

@@ -1,5 +1,6 @@
-
+/* Full screen design and placement */
 @media screen and (min-width: 769px) {
+  /* Navbar elements */
   .navbar {
     position: relative;
     display: block;
@@ -17,7 +18,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 995px;
-    padding: 0, 15px;
+    padding: 0 15px;
   
   }
   
@@ -25,9 +26,8 @@
     float: left;
     width: 124px;
     padding: 35px 0 0 0;
-  
-  
   }
+
   .logo-icon {
     width: 84px;
     cursor: pointer;
@@ -55,13 +55,18 @@
     color: black;
     margin-top: 3.5em;
     justify-content: space-between;
-  
-  
   }
+
+  .navButton {
+    display: none;
+  }
+
   .current {
     font-weight: bold;
     justify-content: space-between;
   }
+
+  /* Sign in options on the next line */
   
   .log-in {
     display: flex;
@@ -85,8 +90,8 @@
     border-color: #C2C2C5;
     border-radius: 5px;
     font-family: 'Neue Helvetica W06', Helvetica, sans-serif;
-
   }
+
   .highlight {
     background-color: #C2C2C5;
     height: 36px;
@@ -120,9 +125,9 @@
     border-style: solid;
     border-width: 1px;
     border-radius: 5px;
-  
   }
 
+  /* Option for information // navigation pages*/
   .options3 {
     display: flex;
     justify-content: center;
@@ -138,7 +143,6 @@
     font-size: 13px;
     font-weight: bold;
     font-family: 'Neue Helvetica W06', Helvetica, sans-serif;
-
   }
   
   ul {
@@ -146,52 +150,56 @@
     justify-content: space-evenly;
     display: flex;
     width: 800px;
-  
-  
-  }
-  .options3 {
-    position: relative;
-  
   }
   
+  /* Hamburger icon and responsive menu*/
   .options3 button {
     display: none;
   }
+  
+  .plusicon {
+    display: none;
+  }
+  .menuNav2 {
+    display: none;
+  }
+
+  /* Responsive menu list */
+
+  .text-columns {
+    display: flex;
+    height: 432px;
+    width: 975px;
+    justify-content: space-between;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+    font-family: 'Neue Helvetica W06', Helvetica, sans-serif;
+  }
+
+  .text-columns12 {
+    width: 325px;
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .text-columns3 {
+    width: 325px;
+    font-size: 16px;
+    padding: 15px;
+    list-style: none;
+  }
 }
 
-.text-columns {
-  display: flex;
-  height: 432px;
-  width: 975px;
-  justify-content: space-between;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5rem;
-  margin-bottom: 4rem;
-  font-family: 'Neue Helvetica W06', Helvetica, sans-serif;
+/* General css for every view */
 
-
-}
 .heading{
   font-size: 22px;
   font-weight: 600;
 }
 
-.text-columns12 {
-  width: 325px;
-  font-size: 16px;
-  padding: 15px;
-  
-
-}
-.text-columns3 {
-  width: 325px;
-  font-size: 16px;
-  padding: 15px;
-  list-style: none;
-  
-}
 .icons {
   color: #4d4d57;
   height: 2.1em;
@@ -201,6 +209,8 @@
 .lisa {
   margin-top: 1em;
 }
+
+/* Footer design */
 
 .footer {
   background-color: #f4f4f4;
@@ -241,6 +251,8 @@
   margin-right: auto;
 }
 
+/* Social icons in footer*/
+
 .socicons {
   list-style: none;
   width: 1.6rem;
@@ -253,10 +265,11 @@
   padding: 5px;
 }
 
-.soc1{
+.soc1 {
   float: left;
 }
-.soc2{
+
+.soc2 {
   float: right;
 }
 
@@ -275,72 +288,148 @@
   padding: 15px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (max-width: 768px) {
+  
+  /* Navigation for responsive view */
+
   .navbar {
     height: 60px;
-
+    position: sticky;
   }
+  
   .options1, 
   .options2, 
   .log-in {
     display: none;
   }
-
   
-.options3 button {
-  position: fixed;
-  right: 20px;
-  top: 20px;
-  z-index: 10;
-  cursor: pointer;
-  background-color: transparent;
-  color: #7c7c85;
-  border: none;
-}
+  .navButton {
+    /* display: flex; */
+    /* float: right; */
+    margin-right: 2.5rem;
+    /* margin: 2rem; */
+    height: 38px;
+    width: 73px;
+    /* margin: 2em; */
+    padding: 0.8em;
+    vertical-align: middle;
+    text-align: center;
+    background-color: #3b3b47;
+    color: white;
+    font-size: 11px;
+    text-transform: uppercase;
 
-.menuNav {
-  overflow-y: scroll;
-  list-style: none;
-  position: fixed;
-  top: 60px;
-  background: #f4f4f4;
-  right: 0;
-  bottom: 0;
-  height: 100vh;
-  width: 0;
-  overflow: hidden;
-  z-index: 9;
-}
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+  }
+    
+  .options3 button {
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    z-index: 10;
+    cursor: pointer;
+    background-color: transparent;
+    color: #7c7c85;
+    border: none;
+  }
 
-.menuNav.showMenu {
-  width: 100%;
-}
+  /* Responsive menu  */
 
-li {
-  display: block;
-  margin: 40px -15px;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-.special {
-  font-weight: lighter;
-  text-transform:none;
-}
+  .menuNav {
+    font-size: 14px;
+    font-weight: 600;
+    overflow-y: scroll;
+    list-style: none;
+    position: fixed;
+    top: 60px;
+    background: #f4f4f4;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 12;
+    width: 0%;
+  }
 
-.menuNav li:first-child {
-  margin-top: 3rem;
-}
+  .menuNav.showMenu {
+    width: 100%;
+    
+  }
+
+  .showMenulist {
+    /* display: block; */
+    margin: 40px -20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 10px;
+  }
+
+  .menuNav1 {
+    font-weight: lighter;
+    text-transform:none;
+    line-height: 10px;
+    border-bottom: #4d4d57;
+  }
+
+  .menuNav2 {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .plusicon {
+    float: right;
+    margin-right: 35px;
+    font-size: 1.2em;
+  }
+
+  .menuNav li:first-child {
+    margin-top: 3rem;
+  }
+
+  .text-columns {
+    display: block;
+    height: auto;
+    padding: 1rem;
+  }
+
+  /* Text columns under the carousel responsive*/
+
+  .heading{
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .text-columns12 {
+    width:fit-content;
+    margin-top: 3rem;
+  }
+  /* Podcast list responsive */
+  .icons {
+    color: #4d4d57;
+    height: 2.1em;
+    width: 1.6em;
+  }
+
+  .text-columns3{
+    margin-top: 3rem;
+    width: auto;
+    font-size: 16px;
+    list-style: none;
+
+  }
+  .podcastlist {
+    font-size: 16px;
+    list-style: none;
+  }
+
+  .socialicons {
+    display: block;
+  }
+
 }
 
